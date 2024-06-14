@@ -28,7 +28,8 @@ function updateScatterChart(dataset) {
     var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
       renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 50 }),
       tooltip: am5.Tooltip.new(root, {}),
-      min: -0.0005
+      min: -0.0005,
+      max: 0.85
     }));
 
     var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
