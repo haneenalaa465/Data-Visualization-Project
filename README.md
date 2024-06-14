@@ -10,3 +10,22 @@ pip install -r requirements.txt
 
 ```
 4. Make sure you have the SQLite database file ("my.db") and the dataset file ("updated_dataset.csv") in the project directory.
+
+## Usage
+1. Start the Flask application by running the following command:
+```
+python server.py
+```
+2. Open your web browser and navigate to http://localhost:5000 to access the homepage.
+3. The application provides the following routes for retrieving data:
+- /get-data-line: Returns data for line chart visualization.
+- /get-data-pie: Returns data for pie chart visualization.
+- /get-data-map: Returns data for map visualization.
+- /get-data-bar: Returns data for bar chart visualization.
+- /get-data-scatter: Returns data for scatter plot visualization.
+
+## Acknowledgements
+
+- [Flask](https://flask.palletsprojects.com/) - Web framework for Python
+- [pandas](https://pandas.pydata.org/) - Data manipulation library
+- [SQLAlchemy](https://www.sqlalchemy.org/) - SQL toolkit and Object-Relational Mapping (ORM) library
