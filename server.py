@@ -116,9 +116,7 @@ def get_data_bar():
         for record in result:
             record_with_name = {'region': category, 'state': record['state'], 'sales': record['sales']}
             data.append(record_with_name)
-    
-    print(data)
-    return jsonify(data)
+        return jsonify(data)
 
 
 from collections import OrderedDict
@@ -155,7 +153,6 @@ def get_data_scatter():
         
         data.append(category_data)
     
-    print(data)
     return jsonify(data)
 
 
