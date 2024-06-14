@@ -42,6 +42,7 @@ function updateLineChart(dataset) {
       panX: true,
       panY: true,
       wheelX: "panX",
+      wheelY: "zoomX",
       maxTooltipDistance: 0,
       pinchZoomX:true
     }));
