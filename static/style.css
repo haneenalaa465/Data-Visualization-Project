@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #16222e;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: #e8eded;
+    border: 1px solid #b7bdc3;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); 
+    margin: 10px;
+    min-width: 200px; 
+}
+
+.box h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.box p {
+    font-size: 1em;
+    color: #6c757d;
+}
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chart-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.chart-box {
+    background-color: #ffffff;
+    border: 1px solid #a9acb0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-box.small {
+    flex: 1 1 44%;
+}
+
+.chart-box.medium {
+    flex: 1 1 38%;
+}
+
+.chart-box.large {
+    flex: 1 1 40%;
+}
+
+.chart-box.half {
+    flex: 1 1 60%;
+}
+
+.chart-box.bigger {
+    flex: 1 1 40%;
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+#PieChartdiv, #ScatterChartdiv, #LineChartdiv, #MapChartdiv {
+    width: 100%;
+    height: 200px;
+}
