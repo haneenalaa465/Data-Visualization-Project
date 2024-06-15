@@ -6,7 +6,7 @@
 2. Make sure you have Python and pip installed.
 3. Install the required dependencies by running the following command:
 ```
-pip install -r requirements.txt
+pip install SQLAlchemy pandas Flask
 
 ```
 4. Make sure you have the SQLite database file ("my.db") and the dataset file ("updated_dataset.csv") in the project directory.
