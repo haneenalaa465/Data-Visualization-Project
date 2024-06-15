@@ -2,7 +2,7 @@
 - This project was completed as part of the Data Integration and Visualization course at Zewail University in Fall 2023. The project utilizes the Flask framework to create a web application for data visualization. It connects to a SQLite database and uses pandas and SQLAlchemy for data manipulation. The application provides various routes for retrieving and visualizing data from the database.
 
 ## Dashboard Image
-  ![image](https://github.com/haneenalaa465/Data-Visualization-Project/assets/112430100/4a75ff89-ea09-42b4-a5b4-8419bf7792aa)
+ ![image](https://github.com/haneenalaa465/Data-Visualization-Project/assets/112430100/7c506d5e-7c58-4d32-b0bf-15483967a291)
 
 
 
