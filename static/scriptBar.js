@@ -27,12 +27,6 @@ function updateBarChart(dataset) {
       wheelX: "none",
       wheelY: "none",
       layout: root.horizontalLayout,
-      padding: {
-        top: 50,    // Adjust as needed
-        right: 50,  // Adjust as needed
-        bottom: 50, // Adjust as needed
-        left: 50    // Adjust as needed
-      }
     }));
     
     
@@ -64,7 +58,7 @@ function updateBarChart(dataset) {
     }));
 
     yAxis.get("renderer").labels.template.setAll({
-      fontSize: 8,
+      fontSize: 12,
       location: 0.5
     })
 

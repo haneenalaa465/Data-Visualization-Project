@@ -1,10 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #16222e;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 .header {
     text-align: center;
@@ -39,7 +44,7 @@ body {
 
 .box p {
     font-size: 1em;
-    color: #6c757d;
+    color: #070708;
 }
 
 .charts {
@@ -93,7 +98,7 @@ body {
 }
 
 
-#PieChartdiv, #ScatterChartdiv, #LineChartdiv, #MapChartdiv {
+#BarChartdiv, #PieChartdiv, #ScatterChartdiv, #LineChartdiv, #MapChartdiv {
     width: 100%;
     height: 200px;
 }

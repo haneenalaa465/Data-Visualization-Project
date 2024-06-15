@@ -23,7 +23,7 @@ connection.close();
 db_url = 'sqlite:///my.db'
 engine = create_engine(db_url, echo= True)
 df_2 = pd.read_sql('select * from updated_dataset', engine)
-print(df_2)
+
 
 app = Flask(__name__)
 
@@ -116,7 +116,9 @@ def get_data_bar():
         for record in result:
             record_with_name = {'region': category, 'state': record['state'], 'sales': record['sales']}
             data.append(record_with_name)
-        return jsonify(data)
+    
+    
+    return jsonify(data)
 
 
 from collections import OrderedDict
@@ -152,6 +154,7 @@ def get_data_scatter():
         }
         
         data.append(category_data)
+    
     
     return jsonify(data)
 
