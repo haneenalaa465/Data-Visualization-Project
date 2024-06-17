@@ -35,6 +35,7 @@ body {
     flex: 1 1 calc(25% - 20px); 
     margin: 10px;
     min-width: 200px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .box h2 {
@@ -70,10 +71,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .chart-box.small {
-    flex: 1 1 44%;
+    flex: 1 1 46%;
 }
 
 .chart-box.medium {
