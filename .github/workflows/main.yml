@@ -3,7 +3,7 @@ name: Dashboard Deployment
 on:
   push:
     branches:
-      - main # Your branch deployment
+      - main
 
 jobs:
   build-and-deploy:
