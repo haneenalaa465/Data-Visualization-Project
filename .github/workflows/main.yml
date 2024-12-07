@@ -3,14 +3,16 @@ name: Dashboard Deployment
 on:
   push:
     branches:
-      -main # Your branch deployment
-  jobs:
-    build-and-deploy
-      runs-on: ubuntu-latest
+      - main # Your branch deployment
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python version
-        uses: actions/setup-python#v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
@@ -18,13 +20,15 @@ on:
         run: |
           python -m venv venv
           source venv/bin/activate
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        
+        run: |
+          source venv/bin/activate
+          pip install -r requirements.txt
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: sales-dashboard
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-          package: ./build 
-      
+          package: .
