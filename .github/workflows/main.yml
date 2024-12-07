@@ -1,4 +1,4 @@
-name: Dasboard Deployment
+name: Dashboard Deployment
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - name: Set up Python version
         uses: actions/setup-python#v4
         with:
-          python-version: '3.9'
+          python-version: '3.10'
 
       - name: Create and start virtual environment
         run: |
@@ -20,4 +20,11 @@ on:
           source venv/bin/activate
       - name: Install dependencies
         run: pip install -r requirements.txt
+        
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: sales-dashboard
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: ./build 
       
