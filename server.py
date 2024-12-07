@@ -36,7 +36,19 @@ def get_data_line():
     data = []
     categories = ['Furniture', 'Office Supplies', 'Technology'] 
     for i in range(3):
-        df = pd.read_sql(f"SELECT [Order Date] As date, SUM(Sales) AS value FROM (SELECT [Order Date], Sales FROM updated_dataset WHERE Category = '{categories[i]}') AS filtered_data GROUP BY [Order Date] ORDER BY [Order Date];", engine) 
+        df = pd.read_sql(f"""
+        SELECT
+            [Order Date] As date, SUM(Sales) AS value
+        FROM
+            (SELECT [Order Date], Sales
+        FROM
+            updated_dataset
+        WHERE
+            Category = '{categories[i]}') AS filtered_data
+        GROUP BY
+            [Order Date]
+        ORDER BY
+            [Order Date];""", engine) 
         
         if not df.empty:
             df['date'] = pd.to_datetime(df['date'])
