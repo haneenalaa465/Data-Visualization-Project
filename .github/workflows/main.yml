@@ -18,9 +18,12 @@ jobs:
 
       - name: Set up and install dependencies
         run: |
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
+             sudo apt install python3.10-venv
+             python -m venv --copies antenv
+             source antenv/bin/activate
+             pip install setuptools
+             pip install -r requirements.txt
+
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
@@ -28,3 +31,4 @@ jobs:
           app-name: sales-dashboard
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: .
+          startup-command: python app.py
