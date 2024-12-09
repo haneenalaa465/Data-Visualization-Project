@@ -16,13 +16,9 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Create and start virtual environment
+      - name: Set up and install dependencies
         run: |
           python3 -m venv venv
-          source venv/bin/activate
-
-      - name: Install dependencies
-        run: |
           source venv/bin/activate
           pip install -r requirements.txt
 
